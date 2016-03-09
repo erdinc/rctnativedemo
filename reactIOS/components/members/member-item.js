@@ -11,6 +11,8 @@ import React, {
   Platform
 } from 'react-native';
 
+import Icon from 'react-native-vector-icons/Ionicons';
+
 class MemberItem extends Component {
   createTouchable(){
     let TouchableElement = TouchableHighlight;
@@ -28,14 +30,13 @@ class MemberItem extends Component {
 
           <View style={styles.row}>
 
-            <Image
-              style={styles.cellImage}
-              source={require('./../../assets/icons/member_item.png')}
-            />
+            <View>
+              <Icon style={styles.cellImage} name="ios-person" size={60} color="#ba78ff" />
+            </View>
 
             <View style={styles.textContainer}>
-              <Text style={styles.text}>{this.props.member.name}</Text>
-              <Text style={styles.text}>{this.props.member.type}</Text>
+              <Text style={styles.textName}>{this.props.member.name}</Text>
+              <Text style={styles.textRole}>{this.props.member.type}</Text>
             </View>
 
           </View>
@@ -47,9 +48,14 @@ class MemberItem extends Component {
 }
 
 const styles = StyleSheet.create({
-  text: {
-    color: '#F5F6F6',
-    fontSize: 12,
+  textName: {
+    color: '#333',
+    fontSize: 16,
+    fontStyle: 'normal'
+  },
+  textRole: {
+    color: '#666',
+    fontSize: 13,
     fontStyle: 'normal'
 
   },
@@ -57,19 +63,21 @@ const styles = StyleSheet.create({
     flex: 1
   },
   row:{
-    backgroundColor: '#3D3D3D',
+    backgroundColor: 'transparent',
     height: 80,
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 5
+    paddingTop: 5,
+    paddingBottom: 5,
+    paddingLeft: 25,
+    paddingRight: 25,
+    borderBottomWidth: 1,
+    borderBottomColor: '#eee'
   },
   cellImage: {
-    backgroundColor: '#dddddd',
     height: 60,
-    marginRight: 10,
     width: 60,
-    borderRadius: 10
-  },
+  }
 });
 
 export default MemberItem;

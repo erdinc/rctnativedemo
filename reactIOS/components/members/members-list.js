@@ -1,21 +1,3 @@
-var MEMBERS = [
-    {
-        name: 'Erdinc Akkaya',
-        type: 'Developer',
-        joinedAt: '01.03.2016'
-    },
-    {
-        name: 'Igor Matias',
-        type: 'Developer',
-        joinedAt: '01.03.2016'
-    },
-    {
-        name: 'Maxim Kozlenko',
-        type: 'Project Manager',
-        joinedAt: '01.03.2016'
-    },
-];
-
 import React, {
     Component,
     StyleSheet,
@@ -24,14 +6,20 @@ import React, {
     View
 } from 'react-native';
 
-import MemberItem from './item';
+import MemberItem from './member-item';
 
 class MembersList extends Component {
-    constructor() {
-        super();
+
+    static propTypes = {
+        members: React.PropTypes.array.isRequired,
+    };
+
+    constructor(props) {
+        super(props);
         let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+        this.props = props;
         this.state = {
-            dataSource: ds.cloneWithRows(MEMBERS)
+            dataSource: ds.cloneWithRows(props.members)
         };
     }
 

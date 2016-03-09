@@ -19,7 +19,7 @@ class UserLoginPage extends Component {
             password: ''
         };
     }
-
+    
     render() {
         return (
             <View style={styles.container}>

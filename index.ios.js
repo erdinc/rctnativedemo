@@ -14,8 +14,8 @@ import React, {
     View
 } from 'react-native';
 
-import MembersPage from './reactIOS/components/members/page';
-import UserLoginPage from './reactIOS/components/user/login';
+import MembersPage from './reactIOS/components/members/members-page';
+import UserLoginPage from './reactIOS/components/user/user-login-page';
 
 class DispatchrDemo extends Component {
     setPage(page) {
