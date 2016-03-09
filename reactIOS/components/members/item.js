@@ -11,7 +11,7 @@ import React, {
   Platform
 } from 'react-native';
 
-class ListCell extends Component {
+class MemberItem extends Component {
   createTouchable(){
     let TouchableElement = TouchableHighlight;
     if (Platform.OS === 'android') {
@@ -30,7 +30,7 @@ class ListCell extends Component {
 
             <Image
               style={styles.cellImage}
-              source={require('./member.png')}
+              source={require('./../../assets/icons/member_item.png')}
             />
 
             <View style={styles.textContainer}>
@@ -72,4 +72,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = ListCell;
+export default MemberItem;
