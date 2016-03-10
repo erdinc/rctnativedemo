@@ -29,9 +29,9 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		85E2B71AFF744A4CB832376C /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D2AFCACC9DE46CDA8B7B96D /* Octicons.ttf */; };
 		8B57570A828047CE95995929 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1F668870D8C4BE1911FE343 /* Entypo.ttf */; };
-		C7F2D3111C90CE250098D4FD /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F2D3101C90CE250098D4FD /* Mapbox.framework */; };
-		C7F2D3121C90CE250098D4FD /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7F2D3101C90CE250098D4FD /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C7F2D3151C90CEDB0098D4FD /* libRCTMapboxGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F2D3061C90CD690098D4FD /* libRCTMapboxGL.a */; };
+		C7F2D31F1C918BF10098D4FD /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F2D31E1C918BF10098D4FD /* Mapbox.framework */; };
+		C7F2D3201C918BF10098D4FD /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7F2D31E1C918BF10098D4FD /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DDE1E6BF395345A6A39EF287 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE5D5FFA67A64B44B60DF9C3 /* Ionicons.ttf */; };
 		F5D5F52961E44645B2CB7498 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEC5921FFAD142C7B9301CD6 /* Foundation.ttf */; };
 /* End PBXBuildFile section */
@@ -138,13 +138,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C7F2D3131C90CE260098D4FD /* Embed Frameworks */ = {
+		C7F2D3191C918B1A0098D4FD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C7F2D3121C90CE250098D4FD /* Mapbox.framework in Embed Frameworks */,
+				C7F2D3201C918BF10098D4FD /* Mapbox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,7 +183,7 @@
 		B1F668870D8C4BE1911FE343 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		B8AE3EDF3C9042E5AA3C61BD /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		C7F2D2FC1C90CD690098D4FD /* RCTMapboxGL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTMapboxGL.xcodeproj; path = "../node_modules/react-native-mapbox-gl/ios/RCTMapboxGL.xcodeproj"; sourceTree = "<group>"; };
-		C7F2D3101C90CE250098D4FD /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../node_modules/react-native-mapbox-gl/ios/Mapbox.framework"; sourceTree = "<group>"; };
+		C7F2D31E1C918BF10098D4FD /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 		E13B1D9E93154EC2AD02ED7F /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,8 +210,8 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				C7F2D31F1C918BF10098D4FD /* Mapbox.framework in Frameworks */,
 				7070878FC1394E64B183F5C8 /* libRNVectorIcons.a in Frameworks */,
-				C7F2D3111C90CE250098D4FD /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +366,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				C7F2D3101C90CE250098D4FD /* Mapbox.framework */,
+				C7F2D31E1C918BF10098D4FD /* Mapbox.framework */,
 				13B07FAE1A68108700A75B9A /* DispatchrDemo */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* DispatchrDemoTests */,
@@ -432,8 +432,8 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				C7F2D3131C90CE260098D4FD /* Embed Frameworks */,
 				C7F2D3141C90CE790098D4FD /* ShellScript */,
+				C7F2D3191C918B1A0098D4FD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -666,14 +666,14 @@
 		};
 		C7F2D3141C90CE790098D4FD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework/strip-frameworks.sh\"";
 		};
@@ -770,6 +770,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEAD_CODE_STRIPPING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -777,7 +781,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 				);
 				INFOPLIST_FILE = DispatchrDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = DispatchrDemo;
@@ -789,6 +793,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -796,7 +804,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 				);
 				INFOPLIST_FILE = DispatchrDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = DispatchrDemo;
